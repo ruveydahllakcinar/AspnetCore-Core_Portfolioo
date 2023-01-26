@@ -1,0 +1,95 @@
+﻿@model EntityLayer.Concrete.About
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
+}
+@using (Html.BeginForm("Index", "About", FormMethod.Post))
+{
+    <div class="col-xl-12 order-xl-1">
+        <div class="card">
+            <div class="card-header">
+                <div class="row align-items-center">
+                    <div class="col-8">
+                        <h3 class="mb-0">About</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="pl-lg-4">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                @Html.HiddenFor(x => x.AboutId)
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                @Html.Label("Title")
+                                @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                @Html.Label("Description")
+                                @Html.TextAreaFor(x => x.Description,10,2, new { @class = "form-control" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                @Html.Label("Birthday")
+                                @Html.TextBoxFor(x => x.Birthday, new { @class = "form-control" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                @Html.Label("Mail")
+                                @Html.TextBoxFor(x => x.Mail, new { @class = "form-control" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                @Html.Label("Freelance")
+                                @Html.TextBoxFor(x => x.Freelance, new { @class = "form-control" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                @Html.Label("Phone")
+                                @Html.TextBoxFor(x => x.Phone, new { @class = "form-control" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                @Html.Label("Adress")
+                                @Html.TextBoxFor(x => x.Adress, new { @class = "form-control" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-8">
+                        <button class="btn btn-large btn-success">Save</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+}
+

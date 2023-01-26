@@ -1,0 +1,28 @@
+﻿@using EntityLayer.Concrete
+@model List<Certficate>
+
+    <div class="section" id="certificate">
+        <div class="container cc-experience">
+            <div class="h4 text-center mb-4 title">Certficate</div>
+            @foreach (var certficate in Model)
+            {
+                <div class="card">
+                    <div class="row">
+                        <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
+                            <div class="card-body cc-experience-header">
+                                <div class="h5">@certficate.CompanyName</div>
+                            </div>
+                        </div>
+                        <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+                            <div class="card-body">
+                                <div class="h5 text-uppercase">@certficate.Title</div>
+                                <div class="col">
+                                    <button type="button" class="btn-scs"><a href="@certficate.Links" target="_blank" class="clr">See Certificate</a></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>

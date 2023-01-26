@@ -1,0 +1,29 @@
+﻿@using EntityLayer.Concrete
+@model List<Speaker>
+
+<div class="section">
+    <div class="container">
+        <div class="card" data-aos="fade-up" data-aos-offset="10">
+            <div class="row">
+           
+                <div class="col-lg-12 col-md-12">
+                    <div class="card-body">
+                        <div class="h4 mt-0 title">Talks & Workshops</div>
+                        <div class="row mt-3">
+                            @foreach (var speaker in Model)
+                            {
+                                <div class="col-sm-4"><strong class="text-uppercase">@speaker.Title :</strong></div>
+                                <div class="col-sm-8">
+                                    <strong>@speaker.Subject </strong>
+                                    <p>@speaker.Date</p>
+                                </div>
+                            }
+                            </div>
+                            
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>

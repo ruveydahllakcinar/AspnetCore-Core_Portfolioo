@@ -1,0 +1,135 @@
+﻿
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en-US">
+
+@await Html.PartialAsync("HeaderPartial")
+
+
+<body id="top">
+    <header>
+        @await Html.PartialAsync("NavbarPartial")
+
+    </header>
+        
+
+    <div class="page-content">
+        <div>
+            @await Component.InvokeAsync("FeatureList")
+
+            @await Component.InvokeAsync("AboutList")
+
+            @await Component.InvokeAsync("SkillList")
+
+            @await Component.InvokeAsync("ExperienceList")
+
+            <div class="section" id="education">
+                <div class="container cc-education">
+                    <div class="h4 text-center mb-4 title">Education</div>
+                    <div class="card">
+                        <div class="row">
+                            <div class="col-md-8 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
+                                <div class="card-body cc-education-header">
+                                    <p>2018-2022</p>
+                                    <div class="h5">Duzce Universty</div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 center" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+                                <div class="card-body">
+                                    <div class="h5">Licence</div>
+                                    <p class="category">Management Information System</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="row">
+                            <div class="col-md-8 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
+                                <div class="card-body cc-education-header">
+                                    <p>2014 - 2018</p>
+                                    <div class="h5">Çağdaş Atılım Collage</div>
+                                </div>
+                            </div>
+                            <div class="col-md-4" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+                                <div class="card-body">
+                                    <div class="h5">High school</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            @await Component.InvokeAsync("SpeakerList")
+            @await Component.InvokeAsync("PortfolioList")
+
+            @await Component.InvokeAsync("CertficateList")
+            <div class="section" id="contact">
+                <div class="cc-contact-information">
+                    <div class="container">
+                        <div class="cc-contact">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="card mb-0" data-aos="zoom-in">
+                                        <div class="h4 text-center title">Contact Me</div>
+                                        <div class="row">
+                                            @* @await Component.InvokeAsync("SendMessage")*@
+                                            <div class="col-md-8">
+                                                @await Html.PartialAsync("/Views/Default/SendMessage.cshtml")
+
+                                            </div>
+                                            <div class="col-md-4">
+                                                @await Component.InvokeAsync("ContactDetails")
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="container text-center">
+                <div class="button-container">
+                    <a class="btn btn-default btn-round btn-lg btn-icon"
+                       href="https://www.linkedin.com/in/ruveydahilalakcinar/" rel="tooltip" title="Follow me on Linkedin">
+                        <i class="fa fa-linkedin"></i>
+                    </a><a class="btn btn-default btn-round btn-lg btn-icon"
+                           href="https://twitter.com/RuveydaAkcinar" rel="tooltip" title="Follow me on Twitter">
+                        <i class="fa fa-twitter"></i>
+                    </a><a class="btn btn-default btn-round btn-lg btn-icon"
+                           href="https://github.com/ruveydahllakcinar" rel="tooltip" title="Follow me on Github">
+                        <i class="fa fa-github"></i>
+                    </a><a class="btn btn-default btn-round btn-lg btn-icon"
+                           href="https://www.instagram.com/ruveydaakcinar/" rel="tooltip" title="Follow me on Instagram">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                    <a class="btn btn-default btn-round btn-lg btn-icon" href="https://medium.com/ruveydaakcinar" rel="tooltip"
+                       title="Follow me on Medium"><i class="fa fa-medium"></i></a>
+                </div>
+
+            </div>
+            <div class="h4 title text-center">Ruveyda Hilal AKÇINAR</div>
+            <div class="text-center text-muted">
+                <p>
+                    &copy; R.H.A. All rights reserved.<br> <a class="credit" href="http://ruveydaakcinar.com/" target="_blank">Ruveyda Hilal AKÇINAR</a>
+                </p>
+            </div>
+        </footer>
+        <script src="~/CvTemplate/js/core/jquery.3.2.1.min.js?ver=1.1.0"></script>
+        <script src="~/CvTemplate/js/core/popper.min.js?ver=1.1.0"></script>
+        <script src="~/CvTemplate/js/core/bootstrap.min.js?ver=1.1.0"></script>
+        <script src="~/CvTemplate/js/now-ui-kit.js?ver=1.1.0"></script>
+        <script src="~/CvTemplate/js/aos.js?ver=1.1.0"></script>
+        <script src="~/CvTemplate/scripts/main.js?ver=1.1.0"></script>
+
+    </div>
+</body>
+
+</html>

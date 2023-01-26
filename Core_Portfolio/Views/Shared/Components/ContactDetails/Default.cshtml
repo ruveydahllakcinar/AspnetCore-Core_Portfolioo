@@ -1,0 +1,15 @@
+﻿@using EntityLayer.Concrete
+@model List<Contact>
+   
+        @foreach (var contact in Model)
+        {
+        <div class="card-body">
+            <p class="mb-0"><strong>@contact.Title </strong></p>
+            <p class="mb-0"><strong>Address </strong></p>
+            <p class="pb-2">@contact.Adress</p>
+            <p class="mb-0"><strong>Phone</strong></p>
+            <p class="pb-2">@contact.Phone</p>
+            <p class="mb-0"><strong>Email</strong></p>
+            <p>@contact.Mail</p>
+        </div>
+        }

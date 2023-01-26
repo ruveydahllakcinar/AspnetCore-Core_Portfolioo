@@ -1,0 +1,61 @@
+﻿@using EntityLayer.Concrete
+@model List<About>
+    <div class="section" id="about">
+        <div class="container">
+            <div class="card" data-aos="fade-up" data-aos-offset="10">
+                @foreach (var about in Model)
+                {
+                    <div class="row">
+                        <div class="col-lg-6 col-md-12">
+                            <div class="card-body">
+                                <div class="h4 mt-0 title">About</div>
+                                <p>
+                                    Hello, I'm Ruveyda Hilal. I graduated from Düzce University, Department of Management Information
+                                    Systems.
+                                    I am interested in web development. I love the C# and Python code language. I have many web related
+                                    projects.
+                                    I have been very interested in community work throughout my university life.
+                                    I worked as a core team member for 2 years in the Google Developer Student Clubs (GDSC Düzce)
+                                    community. I worked as a member and community manager in 1907 University Fenerbahçe Association
+                                    1907UNİFEB. I also work as an Ambassador at Google Women Techmakers. Finally, I work as a Google
+                                    Developer Groups organizer. I organized many events.
+                                    <br>
+                                    <a href="https://www.linkedin.com/in/ruveydahilalakcinar/" target="_blank">Learn More</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12">
+                            <div class="card-body">
+                                <div class="h4 mt-0 title">Basic Information</div>
+                                <div class="row">
+                                    <div class="col-sm-4"><strong class="text-uppercase">Birthday:</strong></div>
+                                    <div class="col-sm-8">16.09.2000</div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-sm-4"><strong class="text-uppercase">Email:</strong></div>
+                                    <div class="col-sm-8">akcinarruveyda@gmail.com</div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-sm-4"><strong class="text-uppercase">Phone:</strong></div>
+                                    <div class="col-sm-8">+90 539 825 14 99</div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-sm-4"><strong class="text-uppercase">Address:</strong></div>
+                                    <div class="col-sm-8">İstanbul, Turkey</div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-sm-4"><strong class="text-uppercase">Freelance:</strong></div>
+                                    <div class="col-sm-8">Available</div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-sm-4"><strong class="text-uppercase">Degree:</strong></div>
+                                    <div class="col-sm-8">Graduate</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                }
+            </div>
+        </div>
+    </div>

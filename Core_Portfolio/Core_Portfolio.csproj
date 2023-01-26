@@ -1,0 +1,147 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwroot\argon-dashboard-master\**" />
+    <Content Remove="wwwroot\argon-dashboard-master\**" />
+    <EmbeddedResource Remove="wwwroot\argon-dashboard-master\**" />
+    <None Remove="wwwroot\argon-dashboard-master\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\CvTemplate\.git\COMMIT_EDITMSG" />
+    <None Include="wwwroot\CvTemplate\.git\config" />
+    <None Include="wwwroot\CvTemplate\.git\description" />
+    <None Include="wwwroot\CvTemplate\.git\FETCH_HEAD" />
+    <None Include="wwwroot\CvTemplate\.git\HEAD" />
+    <None Include="wwwroot\CvTemplate\.git\hooks\applypatch-msg.sample" />
+    <None Include="wwwroot\CvTemplate\.git\hooks\commit-msg.sample" />
+    <None Include="wwwroot\CvTemplate\.git\hooks\fsmonitor-watchman.sample" />
+    <None Include="wwwroot\CvTemplate\.git\hooks\post-update.sample" />
+    <None Include="wwwroot\CvTemplate\.git\hooks\pre-applypatch.sample" />
+    <None Include="wwwroot\CvTemplate\.git\hooks\pre-commit.sample" />
+    <None Include="wwwroot\CvTemplate\.git\hooks\pre-merge-commit.sample" />
+    <None Include="wwwroot\CvTemplate\.git\hooks\pre-push.sample" />
+    <None Include="wwwroot\CvTemplate\.git\hooks\pre-rebase.sample" />
+    <None Include="wwwroot\CvTemplate\.git\hooks\pre-receive.sample" />
+    <None Include="wwwroot\CvTemplate\.git\hooks\prepare-commit-msg.sample" />
+    <None Include="wwwroot\CvTemplate\.git\hooks\push-to-checkout.sample" />
+    <None Include="wwwroot\CvTemplate\.git\hooks\update.sample" />
+    <None Include="wwwroot\CvTemplate\.git\index" />
+    <None Include="wwwroot\CvTemplate\.git\info\exclude" />
+    <None Include="wwwroot\CvTemplate\.git\logs\HEAD" />
+    <None Include="wwwroot\CvTemplate\.git\logs\refs\heads\main" />
+    <None Include="wwwroot\CvTemplate\.git\logs\refs\remotes\origin\HEAD" />
+    <None Include="wwwroot\CvTemplate\.git\logs\refs\remotes\origin\main" />
+    <None Include="wwwroot\CvTemplate\.git\logs\refs\stash" />
+    <None Include="wwwroot\CvTemplate\.git\objects\01\3dc9a6e778d3bcd87a495165aada90ae8282fd" />
+    <None Include="wwwroot\CvTemplate\.git\objects\0c\1782b2a2cf79fbc3d0d2957d82b8c81434ad89" />
+    <None Include="wwwroot\CvTemplate\.git\objects\17\c8cede47d4022f80ca516afc25f2a873ff7574" />
+    <None Include="wwwroot\CvTemplate\.git\objects\1f\d5e54e743c6876d4457c00096ae4b4b1f7203f" />
+    <None Include="wwwroot\CvTemplate\.git\objects\22\efc7a8a3f8f9f1325952a3e65a82ea463a65a9" />
+    <None Include="wwwroot\CvTemplate\.git\objects\25\585b175b216a3aaeac6a8e517623b567f83017" />
+    <None Include="wwwroot\CvTemplate\.git\objects\2c\41daf4f6daf78491122d8e2aaaf0d37cf610c8" />
+    <None Include="wwwroot\CvTemplate\.git\objects\2c\f14a7bf7698cb58877838d270f8d0c068af26d" />
+    <None Include="wwwroot\CvTemplate\.git\objects\31\117c060109bc91bb89dc904a85dff3ab6d3498" />
+    <None Include="wwwroot\CvTemplate\.git\objects\31\fe2cc67e4469b54c5f47dc1cd0a0e2c20b1998" />
+    <None Include="wwwroot\CvTemplate\.git\objects\32\445bf85ecafde695bd9e48085d06ff6f4c62b8" />
+    <None Include="wwwroot\CvTemplate\.git\objects\3f\a4233aa902806833c90182e2e945924db93303" />
+    <None Include="wwwroot\CvTemplate\.git\objects\3f\dd810fe335017c77dd1baa3ae613168561b1d1" />
+    <None Include="wwwroot\CvTemplate\.git\objects\45\61eea661782a8df29ab4d4a923a38839d49901" />
+    <None Include="wwwroot\CvTemplate\.git\objects\48\82e6896c185a75dc533a8f4688d6774c3e8de8" />
+    <None Include="wwwroot\CvTemplate\.git\objects\48\ceccf4aedd3609b0fd853b605a2c20d9a101e4" />
+    <None Include="wwwroot\CvTemplate\.git\objects\4d\b8cf05539591a102c448250a4b489bd6f349b3" />
+    <None Include="wwwroot\CvTemplate\.git\objects\4e\6c22ae2e4cc37a04c6bbb67802b3083da245e3" />
+    <None Include="wwwroot\CvTemplate\.git\objects\51\5df9006b6b142213a1d423988091d7e4a0c204" />
+    <None Include="wwwroot\CvTemplate\.git\objects\52\8b8d12450131769a7f173eb5ec298e7602a9df" />
+    <None Include="wwwroot\CvTemplate\.git\objects\57\b0833aeb07aa1bbfea928539743a75c9c4269f" />
+    <None Include="wwwroot\CvTemplate\.git\objects\58\28ad150446ea11999287317b8906126f94092d" />
+    <None Include="wwwroot\CvTemplate\.git\objects\5a\37ddf9977c964179a7ce8d2e39cd18f0286578" />
+    <None Include="wwwroot\CvTemplate\.git\objects\5c\defc6a16339a07269e57b8787cea17e5984579" />
+    <None Include="wwwroot\CvTemplate\.git\objects\5f\806032dd2607005c278cf63713b269d5b83fe4" />
+    <None Include="wwwroot\CvTemplate\.git\objects\6a\2f8a5cbc183237d4c84e31152dce492f075c2d" />
+    <None Include="wwwroot\CvTemplate\.git\objects\6d\a1e341c6c084e6aeb3fa18b7f7426dccc6492d" />
+    <None Include="wwwroot\CvTemplate\.git\objects\6f\4a9427cedf503c940522363a697d206bf06eec" />
+    <None Include="wwwroot\CvTemplate\.git\objects\6f\9509c88bed7080d496fc5e1d87a9315e30549d" />
+    <None Include="wwwroot\CvTemplate\.git\objects\74\9e34c657011c28e40e8d967007a8cd653b7d1b" />
+    <None Include="wwwroot\CvTemplate\.git\objects\78\edbfa116183a284fadcdee6a4a9f80c8dd8404" />
+    <None Include="wwwroot\CvTemplate\.git\objects\7a\1b68530ec67f33d2c5b89a3f91d1afc7cdff14" />
+    <None Include="wwwroot\CvTemplate\.git\objects\7a\20baf3d0070da4e5a6db5dace215f195e7834c" />
+    <None Include="wwwroot\CvTemplate\.git\objects\81\962930c56834d25421faf6cccbac8a41a1b04b" />
+    <None Include="wwwroot\CvTemplate\.git\objects\84\6d6c4f89cf79f3734d557bd0171c8752a2768f" />
+    <None Include="wwwroot\CvTemplate\.git\objects\86\0a46a5fcc82fff0986353e9862a76ed12e62fd" />
+    <None Include="wwwroot\CvTemplate\.git\objects\86\a85c81f9cc943daddcb81bd6270085e8727fa4" />
+    <None Include="wwwroot\CvTemplate\.git\objects\89\e0c30007db7382ea9786076774637fb8c8c859" />
+    <None Include="wwwroot\CvTemplate\.git\objects\8b\451121f30ff274aa8fbe848e5271180e35bf20" />
+    <None Include="wwwroot\CvTemplate\.git\objects\8d\c2b020410ff52b738732a8918c9acbb2f5a42c" />
+    <None Include="wwwroot\CvTemplate\.git\objects\90\9066a8e0974c5cda0f16afe3f876810e836e9f" />
+    <None Include="wwwroot\CvTemplate\.git\objects\90\9a56307cdae549c1e8d20e9060ffd0222539b5" />
+    <None Include="wwwroot\CvTemplate\.git\objects\94\1937faefb928c2818871c9351886983feb11ab" />
+    <None Include="wwwroot\CvTemplate\.git\objects\a1\3c6e5d71e1e37c4e48640ce3d9b7305dad995a" />
+    <None Include="wwwroot\CvTemplate\.git\objects\a1\8d1c9758246b2afe606446ff8a34ff1f4fa5c9" />
+    <None Include="wwwroot\CvTemplate\.git\objects\a4\1f87ebf85024d9f3b3093b47e6873c2e38b817" />
+    <None Include="wwwroot\CvTemplate\.git\objects\a7\a9b22cbcfb6b9a1359cf7dcacd6b7b5a958ab0" />
+    <None Include="wwwroot\CvTemplate\.git\objects\ab\9506196ccc0d5d41a3a2230d2040252b0c469a" />
+    <None Include="wwwroot\CvTemplate\.git\objects\af\1f5ecc5f2684ef35f332c78b90c5a3e536fbf1" />
+    <None Include="wwwroot\CvTemplate\.git\objects\bc\1dd2e7084cb1abc25fd319fd0dad37d80ad58b" />
+    <None Include="wwwroot\CvTemplate\.git\objects\bf\5b57718d93354e26c010f8b1d9b5fcbdf3081b" />
+    <None Include="wwwroot\CvTemplate\.git\objects\c0\9d89eeb4e5831e0b51dbc09b05be8a401627d7" />
+    <None Include="wwwroot\CvTemplate\.git\objects\c4\55d9fd23ed20595f90e849ec51f9f8749600fd" />
+    <None Include="wwwroot\CvTemplate\.git\objects\c4\7a1e9cb5b35321efc58da1e80f8ef0a0dd6e49" />
+    <None Include="wwwroot\CvTemplate\.git\objects\cb\b174d20be162a990b34363886b87fc5f7de804" />
+    <None Include="wwwroot\CvTemplate\.git\objects\cb\f79eeff0542411e8bf74e3a21acb669111e084" />
+    <None Include="wwwroot\CvTemplate\.git\objects\cd\41e9e1fd1a4d46e76dbab4e45fb58918113b54" />
+    <None Include="wwwroot\CvTemplate\.git\objects\ce\643bacab2fc0fc77bfb795cc55257dd31752cd" />
+    <None Include="wwwroot\CvTemplate\.git\objects\d9\4f9ab785719e453fb1d09f2ceae63b9894cad1" />
+    <None Include="wwwroot\CvTemplate\.git\objects\dc\40f0a8333ddd81c1510d140975e9d824bae4c8" />
+    <None Include="wwwroot\CvTemplate\.git\objects\df\e0770424b2a19faf507a501ebfc23be8f54e7b" />
+    <None Include="wwwroot\CvTemplate\.git\objects\e3\7d469d94061502f7cef4894e5cf8b65bd302e3" />
+    <None Include="wwwroot\CvTemplate\.git\objects\e5\d54ac1fa5800bcd2433b563170e0161dcec874" />
+    <None Include="wwwroot\CvTemplate\.git\objects\f9\545da49fb53e510b2cb6eb06913009b6777850" />
+    <None Include="wwwroot\CvTemplate\.git\objects\f9\ffabf39f0e3616193cb30f23cddf7d5df38a6f" />
+    <None Include="wwwroot\CvTemplate\.git\objects\fc\0dc695ba0849ba5b00568d5d9a4dd3a92a139e" />
+    <None Include="wwwroot\CvTemplate\.git\objects\fc\2240058de09e9c624850f866b3a254e89e2146" />
+    <None Include="wwwroot\CvTemplate\.git\ORIG_HEAD" />
+    <None Include="wwwroot\CvTemplate\.git\refs\heads\main" />
+    <None Include="wwwroot\CvTemplate\.git\refs\remotes\origin\HEAD" />
+    <None Include="wwwroot\CvTemplate\.git\refs\remotes\origin\main" />
+    <None Include="wwwroot\CvTemplate\.git\refs\stash" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.2.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.12">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.12">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj" />
+    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj" />
+    <ProjectReference Include="..\EntityLayer\EntityLayer.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\WriterArea\Data\" />
+    <Folder Include="wwwroot\CvTemplate\.git\objects\info\" />
+    <Folder Include="wwwroot\CvTemplate\.git\objects\pack\" />
+    <Folder Include="wwwroot\CvTemplate\.git\refs\tags\" />
+    <Folder Include="wwwroot\CvTemplate\scripts\core\" />
+    <Folder Include="wwwroot\CvTemplate\scripts\plugins\" />
+    <Folder Include="wwwroot\UserImage\" />
+  </ItemGroup>
+
+</Project>

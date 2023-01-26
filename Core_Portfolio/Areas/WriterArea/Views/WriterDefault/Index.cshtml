@@ -1,0 +1,65 @@
+﻿@using EntityLayer.Concrete
+@model List<Announcement>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_WriterLayout.cshtml";
+}
+
+@{string color = ""; }
+
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Announcements</h4>
+           
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Title</th>
+                            <th>Date</th>
+                            <th>Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var announcement in Model)
+                        {
+                            if (announcement.Status=="New Content")
+                            {
+                                color = "badge badge-danger";
+                            }
+                            if (announcement.Status=="New Event")
+                            {
+                                color = "badge badge-success";
+                            }
+                            if (announcement.Status == "New Talks")
+                            {
+                                color = "badge badge-warning";
+                            }
+                            if (announcement.Status == "#IamRemerkable")
+                            {
+                                color = "badge badge-info";
+                            }
+                            if (announcement.Status == "New Post")
+                            {
+                                color = "badge badge-primary";
+                            }
+                            if (announcement.Status == "Workshops")
+                            {
+                                color = "badge badge-primary";
+                            }
+                        <tr>
+                            <th>@announcement.Id</th>
+                            <td>@announcement.Title</td>
+                            <td>@(((DateTime)announcement.Date).ToString("dd.MM.yyyy"))</td>
+                            <td><a href="/WriterArea/WriterDefault/AnnouncementDetails/@announcement.Id" class="@color">@announcement.Status</a></td>
+                        </tr>
+                        }
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

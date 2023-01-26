@@ -1,0 +1,27 @@
+﻿@using EntityLayer.Concrete
+@model List<Skill>
+    <div class="section" id="skill">
+        <div class="container">
+            <div class="h4 text-center mb-4 title">Professional Skills</div>
+            <div class="card" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                <div class="card-body">
+
+                    @foreach (var skill in Model)
+                    {
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="progress-container progress-primary">
+                                    <span class="progress-badge">@skill.Title</span>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10"
+                                             data-aos-duration="2000" role="progressbar" aria-valuenow="@skill.Value" aria-valuemin="0"
+                                             aria-valuemax="100" style="width: @skill.Value%"></div><span class="progress-value">@skill.Value%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                </div>
+            </div>
+        </div>
+    </div>

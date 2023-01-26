@@ -1,0 +1,32 @@
+﻿@using EntityLayer.Concrete
+@model List<Feature>
+
+<div class="col-md-6 col-xl-4 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <div class="d-flex flex-row justify-content-between">
+                <h4 class="card-title">Messages</h4>
+                <p class="text-muted mb-1 small">View all</p>
+            </div>
+            @foreach (var feature in Model)
+            {
+                <div class="mb--100">
+
+                    <img src="@feature.ImagUrl" alt="image" class="img-fluid" style="border-radius: 100%; display: block; margin-left: auto; margin-right: auto; width: 80%; height: auto;"  />
+                </div>
+
+                <div class="preview-item-content d-flex flex-grow mt-3">
+                    <div class="flex-grow">
+                        <div class="d-flex d-md-block d-xl-flex justify-content-between">
+                            <h6 class="preview-subject">@feature.NameSurname</h6>
+                        </div>
+                        <p class="text-muted">@feature.Title</p>
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <a href="/Feature/" class="btn btn-outline-info">Change Photos</a>
+                </div>
+            }
+        </div>
+    </div>
+</div>

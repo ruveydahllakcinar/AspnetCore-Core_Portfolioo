@@ -1,0 +1,84 @@
+﻿@model EntityLayer.Concrete.Portfolio
+@{
+    ViewData["Title"] = "AddPortfolio";
+    Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("AddPortfolio", "Portfolio", FormMethod.Post))
+{
+    <div class="col-xl-12 order-xl-1">
+        <div class="card">
+            <div class="card-header">
+                <div class="row align-items-center">
+                    <div class="col-8">
+                        <h3 class="mb-0">Add Experience</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="pl-lg-4">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                @Html.Label("Platform")
+                                @Html.TextBoxFor(x => x.Platform, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(x => x.Platform, null, new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                @Html.Label("Project Name")
+                                @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(x => x.Name, null, new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                @Html.Label("URL")
+                                @Html.TextAreaFor(x => x.ProjectUrl, 0, 12, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(x => x.ProjectUrl, null, new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                @Html.Label("Project Image")
+                                @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                @Html.Label("Price")
+                                @Html.TextBoxFor(x => x.Price, new { @class = "form-control" })
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                @Html.Label("Status")
+                                @Html.CheckBoxFor(x => x.Status, new { @class = "form-control" })
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-8">
+                        <button class="btn btn-large btn-primary">Save</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+}
