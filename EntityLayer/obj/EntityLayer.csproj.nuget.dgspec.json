@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ruveyda\\source\\repos\\EntityLayer\\EntityLayer.csproj": {}
+    "C:\\Users\\Ruveyda\\source\\Core_Portfolioo\\EntityLayer\\EntityLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ruveyda\\source\\repos\\EntityLayer\\EntityLayer.csproj": {
+    "C:\\Users\\Ruveyda\\source\\Core_Portfolioo\\EntityLayer\\EntityLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ruveyda\\source\\repos\\EntityLayer\\EntityLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Ruveyda\\source\\Core_Portfolioo\\EntityLayer\\EntityLayer.csproj",
         "projectName": "EntityLayer",
-        "projectPath": "C:\\Users\\Ruveyda\\source\\repos\\EntityLayer\\EntityLayer.csproj",
+        "projectPath": "C:\\Users\\Ruveyda\\source\\Core_Portfolioo\\EntityLayer\\EntityLayer.csproj",
         "packagesPath": "C:\\Users\\Ruveyda\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ruveyda\\source\\repos\\EntityLayer\\obj\\",
+        "outputPath": "C:\\Users\\Ruveyda\\source\\Core_Portfolioo\\EntityLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Ruveyda\\AppData\\Roaming\\NuGet\\NuGet.Config",
