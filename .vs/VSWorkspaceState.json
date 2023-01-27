@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Core_Portfolio",
+    "\\Core_Portfolio\\Areas",
+    "\\Core_Portfolio\\Areas\\WriterArea",
+    "\\Core_Portfolio\\Areas\\WriterArea\\Views",
+    "\\Core_Portfolio\\Areas\\WriterArea\\Views\\Login",
+    "\\Core_Portfolio\\Areas\\WriterArea\\Views\\Profile",
+    "\\Core_Portfolio\\Views",
+    "\\Core_Portfolio\\Views\\Default"
+  ],
+  "SelectedNode": "\\Core_Portfolio\\Areas\\WriterArea\\Views\\Login\\Index.cshtml",
+  "PreviewInSolutionExplorer": false
+}
