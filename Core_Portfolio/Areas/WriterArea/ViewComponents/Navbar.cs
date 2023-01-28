@@ -17,9 +17,9 @@ namespace Core_Portfolio.Areas.WriterArea.ViewComponents
             _userManager = userManager;
         }
 
-        public async Task<IViewComponentResult> InvokeAsync()
+        public IViewComponentResult Invoke()
         {
-            var values =  await _userManager.FindByNameAsync(User.Identity.Name);
+            var values =  _userManager.FindByNameAsync(User.Identity.Name).Result;
             ViewBag.v = values.ImageUrl;
             return View(values);
         }
