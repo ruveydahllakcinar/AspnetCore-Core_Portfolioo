@@ -5,9 +5,10 @@
     "\\Core_Portfolio\\Areas",
     "\\Core_Portfolio\\Areas\\WriterArea",
     "\\Core_Portfolio\\Areas\\WriterArea\\Views",
-    "\\Core_Portfolio\\Areas\\WriterArea\\Views\\Login",
-    "\\DataAccessLayer"
+    "\\Core_Portfolio\\Areas\\WriterArea\\Views\\Shared",
+    "\\Core_Portfolio\\Areas\\WriterArea\\Views\\Shared\\Components",
+    "\\Core_Portfolio\\Areas\\WriterArea\\Views\\Shared\\Components\\Navbar"
   ],
-  "SelectedNode": "\\Core_Portfolio\\Areas\\WriterArea\\Views\\Login\\Index.cshtml",
+  "SelectedNode": "\\Core_Portfolio\\Areas\\WriterArea\\Views\\Shared\\Components\\Navbar\\Default.cshtml",
   "PreviewInSolutionExplorer": false
 }

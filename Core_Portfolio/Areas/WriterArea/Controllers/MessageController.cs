@@ -1,4 +1,5 @@
 ﻿using BusinessLayer.Concrete;
+using DataAccessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using Microsoft.AspNetCore.Identity;
@@ -58,7 +59,17 @@ namespace Core_Portfolio.Areas.WriterArea.Controllers
         [HttpPost]
         public IActionResult SendMessage(WriterMessage writerMessage)
         {
-            return View();
+            var values = _userManager.FindByNameAsync(User.Identity.Name).Result;
+            string mail = values.Email;
+            string name = values.Name + " " + values.Surname;
+            writerMessage.Date = Convert.ToDateTime(DateTime.Now.ToShortDateString());
+            writerMessage.Sender = mail;
+            writerMessage.SenderName = name;
+            Context context = new Context();
+            var usernamesurname = context.Users.Where(x => x.Email == writerMessage.Receiver).Select(y => y.Name + " " + y.Surname).FirstOrDefault();
+            writerMessage.ReceiverName = usernamesurname;
+            writerMessageManager.TAdd(writerMessage);
+            return RedirectToAction("SenderMessage", "Message");
         }
     }
 }

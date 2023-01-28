@@ -10,11 +10,9 @@ namespace Core_Portfolio.ViewComponents.Dashboard
 {
     public class MessageList:ViewComponent
     {
-        UserMessageManager userMessageManager = new UserMessageManager(new EfTodoListDal());
         public IViewComponentResult Invoke()
         {
-            var values = userMessageManager.GetUserMessagesWithUserService();
-            return View(values);
+            return View();
         }
     }
 }
