@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 namespace Core_Portfolio.Areas.WriterArea.Controllers
 {
     [Area("WriterArea")]
+    [Route("WriterArea/[controller]/[action]")]
+
     public class RegisterController : Controller
     {
         private readonly UserManager<WriterUser> _userManager;
