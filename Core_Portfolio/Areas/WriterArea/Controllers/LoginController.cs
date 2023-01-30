@@ -41,5 +41,11 @@ namespace Core_Portfolio.Areas.WriterArea.Controllers
             }
                 return View();
         }
+        public async Task<IActionResult> LogOut()
+        {
+            await _signInManager.SignOutAsync();
+            return RedirectToAction("Index","Login");
+        }
+
     }
 }

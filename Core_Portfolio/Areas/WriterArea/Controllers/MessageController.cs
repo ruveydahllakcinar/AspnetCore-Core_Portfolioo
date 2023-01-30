@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 namespace Core_Portfolio.Areas.WriterArea.Controllers
 {
     [Area("WriterArea")]
-    [Route("WriterArea/[controller]/[action]")]
+    [Route("WriterArea/Message")]
     public class MessageController : Controller
     {
         private readonly UserManager<WriterUser> _userManager;
@@ -22,6 +22,8 @@ namespace Core_Portfolio.Areas.WriterArea.Controllers
         {
             _userManager = userManager;
         }
+        [Route("")]
+        [Route("ReceiverMessage")]
 
         public async Task<IActionResult>ReceiverMessage(string p) //Alıcı mesaj
         {
@@ -31,7 +33,8 @@ namespace Core_Portfolio.Areas.WriterArea.Controllers
 
             return View(messageList);
         }
-
+        [Route("")]
+        [Route("SenderMessage")]
         public async Task<IActionResult> SenderMessage(string p) //Gönderici mesaj
         {
             var values = await _userManager.FindByNameAsync(User.Identity.Name);
@@ -40,24 +43,32 @@ namespace Core_Portfolio.Areas.WriterArea.Controllers
 
             return View(messageList);
         }
-
+        [Route("MessageDetails/{id}")]
         public IActionResult MessageDetails(int id)
         {
             WriterMessage writerMessage = writerMessageManager.TGetByID(id);
             return View(writerMessage);
         }
-      
+        [Route("ReceiverMessageDetails/{id}")]
+
         public IActionResult ReceiverMessageDetails(int id)
         {
             WriterMessage writerMessage = writerMessageManager.TGetByID(id);
             return View(writerMessage);
         }
+     
         [HttpGet]
+        [Route("")]
+        [Route("SendMessage")]
         public IActionResult SendMessage()
         {
             return View();
         }
+
         [HttpPost]
+        [Route("")]
+        [Route("SendMessage")]
+
         public IActionResult SendMessage(WriterMessage writerMessage)
         {
             var values = _userManager.FindByNameAsync(User.Identity.Name).Result;

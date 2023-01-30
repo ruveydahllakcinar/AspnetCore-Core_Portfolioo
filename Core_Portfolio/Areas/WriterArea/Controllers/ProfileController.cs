@@ -44,13 +44,15 @@ namespace Core_Portfolio.Areas.WriterArea.Controllers
                 var stream = new FileStream(savelocation, FileMode.Create);
                 await userEditViewModel.Picture.CopyToAsync(stream);
                 user.ImageUrl = imagename;
+
             }
+           
             user.Name = userEditViewModel.Name;
             user.Surname = userEditViewModel.Surname;
             var result = await _userManager.UpdateAsync(user);
             if (result.Succeeded)
             {
-                return RedirectToAction("Index", "Login");
+                return RedirectToAction("Index", "Profile");
             }
             return View();
         }

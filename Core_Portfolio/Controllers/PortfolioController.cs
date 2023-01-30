@@ -16,21 +16,12 @@ namespace Core_Portfolio.Controllers
         PortfolioManager portfolioManager = new PortfolioManager(new EfPortfolioDal());
         public IActionResult Index()
         {
-            ViewBag.v1 = "Portfolio List";
-            ViewBag.v2 = "Portfolio";
-            ViewBag.v3 = "Portfolio List";
-            ViewBag.v4 = "/Portfolio/Index";
             var values = portfolioManager.TGetList();
             return View(values);
         }
         [HttpGet]
         public IActionResult AddPortfolio()
-        {
-            ViewBag.v1 = "Add Portfolio";
-            ViewBag.v2 = "Portfolio";
-            ViewBag.v3 = "Add Portfolio";
-            ViewBag.v4 = "/Portfolio/Index";
-
+        {     
             return View();
         }
 
@@ -66,11 +57,7 @@ namespace Core_Portfolio.Controllers
 
         public IActionResult EditPortfolio(int id)
         {
-            ViewBag.v1 = "Update Portfolio";
-            ViewBag.v2 = "Portfolio";
-            ViewBag.v3 = "Update Portfolio";
-            ViewBag.v4 = "/Portfolio/Index";
-
+       
             var values = portfolioManager.TGetByID(id);
             return View(values);
         }

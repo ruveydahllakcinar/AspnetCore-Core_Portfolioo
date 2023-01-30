@@ -10,9 +10,6 @@ namespace Core_Portfolio.Controllers
     {
         public IActionResult Index()
         {
-            ViewBag.v1 = "Dashboard";
-            ViewBag.v2 = "Statistics";
-            ViewBag.v3 = "Statistics Page";
             return View();
         }
     }

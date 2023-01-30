@@ -12,14 +12,10 @@ namespace Core_Portfolio.Controllers
     public class FeatureController : Controller
     {
         FeatureManager featureManager = new FeatureManager(new EfFeatureDal());
+
         [HttpGet]
         public IActionResult Index()
         {
-
-            ViewBag.v1 = "Update Highlights";
-            ViewBag.v2 = "Highlights";
-            ViewBag.v3 = "Update Highlights";
-            ViewBag.v4 = "/Feature/Index";
             var values = featureManager.TGetByID(1);
             return View(values);
         }
