@@ -27,21 +27,22 @@
                     <tbody>
                         @foreach (var writerMessage in Model)
                         {
-                            <tr>
-                                <td>@writerMessage.WriterMessageId</td>
-                                <td>@writerMessage.SenderName</td>
-                                <td>@writerMessage.Subject</td>
-                                <td>@writerMessage.Date</td>
-                                <td>
-                                    <a href="/Contact/DeleteMessage/@writerMessage.WriterMessageId" class="btn btn-outline-danger">Delete</a>
-                                </td>
-                                <td>
-                                    <a href="/Contact/ContactDetails/@writerMessage.WriterMessageId" class="btn btn-outline-success">Message Details</a>
-                                </td>
-                            </tr>
+                        <tr>
+                            <td>@writerMessage.WriterMessageId</td>
+                            <td>@writerMessage.SenderName</td>
+                            <td>@writerMessage.Subject</td>
+                            <td>@writerMessage.Date</td>
+                            <td>
+                                <a href="/AdminMessage/AdminMessageDelete/@writerMessage.WriterMessageId" class="btn btn-outline-danger">Delete</a>
+                            </td>
+                            <td>
+                                <a href="/AdminMessage/AdminMessageDetails/@writerMessage.WriterMessageId" class="btn btn-outline-success">Message Details</a>
+                            </td>
+                        </tr>
                         }
                     </tbody>
                 </table>
+                <a href="/AdminMessage/AdminMessageSend" class="btn btn-outline-info">Create New Message</a>
             </div>
 
         </div>
