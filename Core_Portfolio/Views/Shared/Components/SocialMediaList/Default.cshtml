@@ -1,0 +1,13 @@
+﻿@using EntityLayer.Concrete
+@model List<SocialMedia>
+
+<div class="section">
+    <div class="container">
+        <div class="button-container">
+          @foreach (var sm in Model)
+          {
+            <a class="btn btn-default btn-round btn-lg btn-icon" href="@sm.Url" rel="tooltip" title="@sm.Name" target="_blank"><i class="@sm.Icon"></i></a>
+          }
+        </div>
+    </div>
+</div>
