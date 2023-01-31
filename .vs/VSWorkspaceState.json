@@ -4,12 +4,13 @@
     "\\Core_Portfolio",
     "\\Core_Portfolio\\Areas",
     "\\Core_Portfolio\\Areas\\WriterArea",
-    "\\Core_Portfolio\\Areas\\WriterArea\\Controllers",
     "\\Core_Portfolio\\Areas\\WriterArea\\Views",
     "\\Core_Portfolio\\Areas\\WriterArea\\Views\\Shared",
     "\\Core_Portfolio\\Areas\\WriterArea\\Views\\Shared\\Components",
-    "\\Core_Portfolio\\Areas\\WriterArea\\Views\\Shared\\Components\\Navbar"
+    "\\Core_Portfolio\\Areas\\WriterArea\\Views\\Shared\\Components\\Navbar",
+    "\\Core_Portfolio\\Views",
+    "\\Core_Portfolio\\Views\\Admin"
   ],
-  "SelectedNode": "\\Core_Portfolio\\Areas\\WriterArea\\Controllers\\ProfileController.cs",
+  "SelectedNode": "\\Core_Portfolio\\Views\\Admin\\PartialNewSidebar.cshtml",
   "PreviewInSolutionExplorer": false
 }
