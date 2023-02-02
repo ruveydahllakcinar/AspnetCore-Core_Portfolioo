@@ -1,0 +1,18 @@
+﻿@using EntityLayer.Concrete
+@model List<WriterMessage>
+
+<div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="messageDropdown">
+    <h6 class="p-3 mb-0">Last Message</h6>
+    @foreach (var wm in Model)
+    {
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item preview-item" href="/AdminMessage/AdminMessageDetails/@wm.WriterMessageId">
+        <div class="preview-item-content">
+            <p class="preview-subject ellipsis mb-1">@wm.SenderName send a new message</p>
+            <p class="text-muted mb-0"> @(((DateTime)wm.Date).ToString("dd-MMM-yyyy")) </p>
+        </div>
+    </a>
+    }
+    <div class="dropdown-divider"></div>
+    <a href="/AdminMessage/ReceiverMessageList"><p class="p-3 mb-0 text-center">@ViewBag.v1 total of number messages</p></a>
+</div>

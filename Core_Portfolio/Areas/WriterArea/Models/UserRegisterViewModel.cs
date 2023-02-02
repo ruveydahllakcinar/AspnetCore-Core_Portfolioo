@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -26,6 +27,7 @@ namespace Core_Portfolio.Areas.WriterArea.Models
 
         [Required(ErrorMessage = "Please enter image url")]
         public string ImageUrl { get; set; }
+        public IFormFile Image { get; set; }
 
         [Required(ErrorMessage = "Please enter the mail")]
         public string Mail { get; set; }

@@ -68,15 +68,15 @@ namespace Core_Portfolio.Areas.WriterArea.Controllers
         //}
 
 
-        [HttpPost]
-        public async Task<IActionResult> ChangePassword(UserEditViewModel userEditViewModel)
-        {
-            //var values = await _userManager.FindByNameAsync(User.Identity.Name);
-            //UserEditViewModel model = new UserEditViewModel();
-            //model.Password = values.PasswordHash;
-            //model.Surname = values.Surname;
-            //model.PictureURL = values.ImageUrl;
-            return View();
-        }
+        //[HttpPost]
+        //public async Task<IActionResult> ChangePassword(UserEditViewModel userEditViewModel)
+        //{
+        //    //var values = await _userManager.FindByNameAsync(User.Identity.Name);
+        //    //UserEditViewModel model = new UserEditViewModel();
+        //    //model.Password = values.PasswordHash;
+        //    //model.Surname = values.Surname;
+        //    //model.PictureURL = values.ImageUrl;
+        //    return View();
+        //}
     }
 }

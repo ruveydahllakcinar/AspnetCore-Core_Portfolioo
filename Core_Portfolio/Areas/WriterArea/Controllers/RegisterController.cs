@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -26,39 +27,35 @@ namespace Core_Portfolio.Areas.WriterArea.Controllers
         {
             return View(new UserRegisterViewModel());
         }
+
         [HttpPost]
-        public async Task<IActionResult> Index(UserRegisterViewModel userRegisterViewModel)
+        public async Task<IActionResult> Index(UserRegisterViewModel userRegisterView)
         {
-            if (ModelState.IsValid)
+            WriterUser w = new WriterUser()
             {
-                WriterUser writerUser = new WriterUser()
-                {
-                    Name = userRegisterViewModel.Name,
-                    Surname = userRegisterViewModel.Surname,
-                    Email = userRegisterViewModel.Mail,
-                    UserName = userRegisterViewModel.UserName,
-                    ImageUrl = userRegisterViewModel.ImageUrl
-                };
-                if (userRegisterViewModel.Password == userRegisterViewModel.ConfirmPassword)
-                {
-                    var result = await _userManager.CreateAsync(writerUser, userRegisterViewModel.Password);
+                Name = userRegisterView.Name,
+                Surname = userRegisterView.Surname,
+                Email = userRegisterView.Mail,
+                UserName = userRegisterView.UserName,
+            };
 
-                    if (result.Succeeded)
-                    {
-                        return RedirectToAction("Index", "Login");
-                    }
-                    else
-                    {
-                        foreach (var error in result.Errors)
-                        {
-                            ModelState.AddModelError("", error.Description);
-                        }
-                    }
+            if (userRegisterView.Password == userRegisterView.ConfirmPassword)
+            {
+                var result = await _userManager.CreateAsync(w, userRegisterView.Password);
 
+                if (result.Succeeded)
+                {
+                    return RedirectToAction("Index", "Login");
+                }
+                else
+                {
+                    foreach (var item in result.Errors)
+                    {
+                        ModelState.AddModelError("", item.Description);
+                    }
                 }
             }
-
-            return View();
+            return View(userRegisterView);
         }
     }
 }
