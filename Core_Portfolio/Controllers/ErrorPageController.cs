@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Core_Portfolio.Controllers
 {
-    public class AdminLoginController : Controller
+    public class ErrorPageController : Controller
     {
         public IActionResult Index()
         {

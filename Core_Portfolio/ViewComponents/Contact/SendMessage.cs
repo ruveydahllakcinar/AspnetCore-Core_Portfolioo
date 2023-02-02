@@ -20,13 +20,6 @@ namespace Core_Portfolio.ViewComponents.Contact
 
             return View();
         }
-        //[HttpPost]
-        //public IViewComponentResult Invoke(Message m)
-        //{
-        //    m.Date = Convert.ToDateTime(DateTime.Now.ToShortDateString());
-        //    m.Status = true;
-        //    messageManager.TAdd(m);
-        //    return View();
-        //}
+     
     }
 }
