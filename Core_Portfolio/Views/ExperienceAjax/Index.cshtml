@@ -1,0 +1,162 @@
+﻿@using EntityLayer.Concrete
+@model List<Experience>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
+}
+
+
+
+<div class="p-2" id="listexperience">
+    <h5>Get Experience List</h5>
+
+    <button type="button" id="btngetlistall" class="btn btn-primary">Get List</button>
+
+</div>
+
+<br />
+<div class="p-2" id="listbyidexperience">
+    <h5>Get Experience Id</h5>
+
+    <button type="button" id="btngetid" class="btn btn-success">Get Id</button>
+
+</div>
+
+<br />
+
+<div class="col-md-12">
+    <h5>Add Experience</h5>
+
+    <input type="text" class="form-control" id="inptitle" placeholder="Title" />
+    <br />
+    <input type="text" class="form-control" id="inpcompanyname" placeholder="Company Name" />
+    <br />
+    <input type="text" class="form-control" id="inpdate" placeholder="Date" />
+    <br />
+    <textarea type="text" class="form-control" id="inpdesc" rows="5" placeholder="Description"></textarea>
+    <br />
+    <button type="button" id="btnaddexperience" class="btn btn-warning">Save</button>
+
+</div>
+<br />
+<div class="col-md-12">
+    <h5>Get By Id</h5>
+    <input type="text" class="form-control" id="inpid" placeholder="Please, enter id" />
+    <br />
+</div>
+<br />
+<div class="col-md-12">
+    <h5>Delete Experience</h5>
+    <input type="text" class="form-control" id="inpexpid" placeholder="Please, enter id" />
+    <br />
+    <button type="button" id="btndelete" class="btn btn-danger">Delete</button>
+</div>
+<br />
+<div class="col-md-12">
+    <h5>Update Panel</h5>
+    <input type="text" class="form-control" id="inpeditId" placeholder="Id" />
+    <br />
+    <input type="text" class="form-control" id="inpedittitle" placeholder="Title" />
+    <br />
+    <input type="text" class="form-control" id="inpeditcompanyname" placeholder="Company Name" />
+    <br />
+    <input type="text" class="form-control" id="inpeditdate" placeholder="Date" />
+    <br />
+    <textarea type="text" class="form-control" id="inpeditdesc" rows="5" placeholder="Description"></textarea>
+    <br />
+    <button type="button" id="btneditexperience" class="btn btn-info">Update</button>
+</div>
+
+@section Scripts{
+    <script>
+        $("#btngetlistall").click(function () {
+            $.ajax({
+                contentType: "application/json",
+                dataType: "json",
+                type: "Get",
+                url: "/ExperienceAjax/ListExperience/",
+
+                success: function (funk) {
+                    let experience = jQuery.parseJSON(funk);
+                    console.log(experience);
+
+                    let htmlst = "<table class=table table-bordered> <tr> <th>ID</th> <th>Company Name</th> <th>Title</th> <th>Date</th></tr>";
+                    $.each(experience, (index, value) => {
+                        htmlst += `<tr><td>${value.ExperienceId}</td><td>${value.CompanyName}</td><td>${value.Title}</td><td>${value.Date}</td></tr>`
+                    });
+                    htmlst += "</table>";
+                    $('#listexperience').html(htmlst);
+                }
+            });
+        });
+
+        $('#btnaddexperience').click(function () {
+            let values = {
+                Title: $("#inptitle").val(),
+                CompanyName: $("#inpcompanyname").val(),
+                Date: $("#inpdate").val(),
+                Description: $("#inpdesc").val(),
+            };
+            $.ajax({
+                type: "Post",
+                url: "/ExperienceAjax/AddExperience",
+                data: values,
+                success: function (funcexp) {
+                    let result = jQuery.parseJSON(funcexp);
+                    alert(result.Title + "Title successfully added");
+                }
+            });
+        });
+
+        $('#btngetid').click(x => {
+            let id = $("#inpid").val();
+
+            $.ajax({
+                contentType: "application/json",
+                dataType: "json",
+                type: "get",
+                url: "/ExperienceAjax/GetById/",
+                data: { ExperienceId: id },
+                success: function (funcid) {
+                    let result = jQuery.parseJSON(funcid);
+                    console.log(result);
+                    let htmlstr = `<table class=table table-bordered> <tr> <th>Experience Id</th><td>${result.ExperienceId}</td></tr> <tr><th>Company Name</th><td>${result.CompanyName}</td></tr><tr><th>Title</th><td>${result.Title}</td><tr><th>Date</th><td>${result.Date}</td></tr>`
+                    $("#listbyidexperience").html(htmlstr);
+                }
+            });
+        });
+
+        $("#btndelete").click(x => {
+            let id = $("#inpexpid").val();
+            $.ajax({
+                url: "/ExperienceAjax/DeleteExperience/" + id,
+                type: "post",
+                contentType: "application/json",
+                dataType: "json",
+                success: function (funk3) {
+                    loadData();
+                }
+            });
+        });
+
+        $("#btneditexperience").click(function () {
+            let values = {
+                Id: $("#inpeditId").val(),
+                Title: $("#inpedittitle").val(),
+                CompanyName: $("#inpeditcompanyname").val(),
+                Date: $("#inpeditdate").val(),
+                Description: $("#inpeditdesc").val(),
+            };
+
+            $.ajax({
+                type: "post",
+                url: "/ExperienceAjax/UpdateExperince/",
+                data: values,
+                success: function (func4) {
+                    alert("Update done");
+                }
+            });
+        });
+    </script>
+}
+<script src="~/lib/jquery/dist/jquery.js"></script>

@@ -7,7 +7,8 @@
 
 <div class="col-md-6">
     <div class="p-2">
-        <button type="button" id="getlistall" class="btn btn-outline-success">Get Data</button>
+        <button type="button" id="btngetlistall" class="btn btn-inverse-primary">Get Data</button>
+        <button type="button" id="btnadduser" class="btn btn-inverse-warning">Save</button>
     </div>
 
 </div>
@@ -17,6 +18,18 @@
     Data will come here
 </div>
 
+<br />
+
+<div class="col-md-12">
+    <input type="text" class="form-control" id="inpname" placeholder="Name" />
+    <br />
+    <input type="text" class="form-control" id="inpsuname" placeholder="Surname" />
+    <br />
+    <input type="text" class="form-control" id="inpusername" placeholder="Username" />
+    <br />
+    <input type="text" class="form-control" id="inpmail" placeholder="Mail Adress" />
+
+</div>
 @section Scripts{
     <script>
         $("#getlistall").click(function () {

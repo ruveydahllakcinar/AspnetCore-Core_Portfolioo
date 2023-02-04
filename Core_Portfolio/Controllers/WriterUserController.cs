@@ -1,5 +1,6 @@
 ﻿using BusinessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
+using EntityLayer.Concrete;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System;
@@ -20,6 +21,14 @@ namespace Core_Portfolio.Controllers
         public IActionResult ListUser()
         {
             var values = JsonConvert.SerializeObject(writerManager.TGetList());
+            return Json(values);
+        }
+
+        [HttpPost]
+        public IActionResult AddUser(WriterUser writerUser)
+        {
+            writerManager.TAdd(writerUser);
+            var values = JsonConvert.SerializeObject(writerUser);
             return Json(values);
         }
     }
