@@ -1,29 +1,29 @@
 ﻿@using EntityLayer.Concrete
 @model List<Speaker>
-
 <div class="section">
-    <div class="container">
-        <div class="card" data-aos="fade-up" data-aos-offset="10">
-            <div class="row">
-           
-                <div class="col-lg-12 col-md-12">
-                    <div class="card-body">
-                        <div class="h4 mt-0 title">Talks & Workshops</div>
-                        <div class="row mt-3">
-                            @foreach (var speaker in Model)
-                            {
-                                <div class="col-sm-4"><strong class="text-uppercase">@speaker.Title :</strong></div>
-                                <div class="col-sm-8">
-                                    <strong>@speaker.Subject </strong>
-                                    <p>@speaker.Date</p>
-                                </div>
-                            }
-                            </div>
-                            
+    <div class="container cc-experience">
+        <div class="h4 text-center mb-4 title">Talks&Workshops</div>
+            @foreach (var speaker in Model)
+            {
+            <div class="card">
+                <div class="row">
+                    <div data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
+                        <div class="card-body preview-thumbnail ml-3">      
+                              <img src="~/SpeakerImage/@speaker.SpeakerImage" alt="image" class="img-fluid" style="height:auto; width:100px; border-radius:100%" />
+                        </div>                        
+                    </div>
+                    <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+                        <div class="card-body">
+                            <div class="flex-grow">
+                                <h6 class="preview-subject text-uppercase">@speaker.Title</h6>
+                                <p class="text-muted mb-0">@speaker.Subject</p>
+                                <p class="text-muted mb-0">@speaker.Date</p>
+                            </div> 
+                        </div>
                     </div>
                 </div>
-                
+
             </div>
-        </div>
+            }
     </div>
 </div>

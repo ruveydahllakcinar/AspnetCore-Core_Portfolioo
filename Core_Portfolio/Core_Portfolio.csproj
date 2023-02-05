@@ -141,6 +141,7 @@
     <Folder Include="wwwroot\CvTemplate\.git\refs\tags\" />
     <Folder Include="wwwroot\CvTemplate\scripts\core\" />
     <Folder Include="wwwroot\CvTemplate\scripts\plugins\" />
+    <Folder Include="wwwroot\SpeakerImage\" />
   </ItemGroup>
 
 </Project>

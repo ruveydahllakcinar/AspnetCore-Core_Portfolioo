@@ -18,7 +18,6 @@ namespace Core_Portfolio.Controllers
         ExperienceManager experienceManager = new ExperienceManager(new EfExperienceDal());
         public IActionResult Index()
         {
-           
             var values = experienceManager.TGetList();
             return View(values);
         }

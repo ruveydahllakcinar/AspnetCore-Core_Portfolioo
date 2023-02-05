@@ -1,11 +1,14 @@
 ﻿using BusinessLayer.Concrete;
 using BusinessLayer.ValidationRules;
+using Core_Portfolio.Models;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using FluentValidation.Results;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -38,27 +41,30 @@ namespace Core_Portfolio.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddSpeaker(Speaker speaker)
+        public IActionResult AddSpeaker(AddSpeakerImage addSpeaker)
         {
+            Speaker speaker = new Speaker();
+            if (addSpeaker.SpeakerImage != null)
             {
-                SpeakerValidator validations = new SpeakerValidator();
-                ValidationResult results = validations.Validate(speaker);
+                var resource = Directory.GetCurrentDirectory();
+                var extension = Path.GetExtension(addSpeaker.SpeakerImage.FileName);
+                var imagename = Guid.NewGuid() + extension;
+                var savelocation = resource + "/wwwroot/SpeakerImage/" + imagename;
+                var stream = new FileStream(savelocation, FileMode.Create);
+                addSpeaker.SpeakerImage.CopyToAsync(stream);
+                speaker.SpeakerImage = imagename;
+               
 
-                if (results.IsValid)
-                {
-                    speakerManager.TAdd(speaker);
-                    return RedirectToAction("Index");
-                }
-                else
-                {
-                    foreach (var exp in results.Errors)
-                    {
-                        ModelState.AddModelError(exp.PropertyName, exp.ErrorMessage);
-                    }
-                }
-                return View();
             }
+            speaker.Title = addSpeaker.Title;
+            speaker.Subject = addSpeaker.Subject;
+            speaker.Date = addSpeaker.Date;        
+            speakerManager.TAdd(speaker);
+            return RedirectToAction("Index");
+           
         }
+
+      
         [HttpGet]
         public IActionResult DeleteSpeaker(int id)
         {
@@ -83,24 +89,28 @@ namespace Core_Portfolio.Controllers
         }
 
         [HttpPost]
-        public IActionResult EditSpeaker(Speaker speaker)
+        public IActionResult EditSpeaker(AddSpeakerImage addSpeaker)
         {
-            SpeakerValidator validations = new SpeakerValidator();
-            ValidationResult results = validations.Validate(speaker);
+            Speaker speaker = new Speaker();
+            if (addSpeaker.SpeakerImage != null)
+            {
+                var resource = Directory.GetCurrentDirectory();
+                var extension = Path.GetExtension(addSpeaker.SpeakerImage.FileName);
+                var imagename = Guid.NewGuid() + extension;
+                var savelocation = resource + "/wwwroot/SpeakerImage/" + imagename;
+                var stream = new FileStream(savelocation, FileMode.Create);
+                addSpeaker.SpeakerImage.CopyToAsync(stream);
+                speaker.SpeakerImage = imagename;
 
-            if (results.IsValid)
-            {
-                speakerManager.TUpdate(speaker);
-                return RedirectToAction("Index");
+
             }
-            else
-            {
-                foreach (var exp in results.Errors)
-                {
-                    ModelState.AddModelError(exp.PropertyName, exp.ErrorMessage);
-                }
-            }
-            return View();
+            speaker.Title = addSpeaker.Title;
+            speaker.Subject = addSpeaker.Subject;
+            speaker.Date = addSpeaker.Date;
+            speakerManager.TUpdate(speaker);
+            return RedirectToAction("Index");
+            
         }
     }
+
 }
