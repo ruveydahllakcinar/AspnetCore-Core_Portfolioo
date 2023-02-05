@@ -5,45 +5,42 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace Core_Portfolio.Areas.WriterArea.Controllers
 {
-    [Area("WriterArea")]
-    [Route("WriterArea/[controller]/[action]")]
-    [AllowAnonymous]
-    public class RegisterController : Controller
+    public class SettingsController : Controller
     {
         private readonly UserManager<WriterUser> _userManager;
 
-        public RegisterController(UserManager<WriterUser> userManager)
+        public SettingsController(UserManager<WriterUser> userManager)
         {
             _userManager = userManager;
         }
-
+        [AllowAnonymous]
+        [Area("WriterArea")]
+        [Route("WriterArea/Settings/ChangePassword")]
         [HttpGet]
-        public IActionResult Index()
+        public IActionResult ChangePassword()
         {
-            return View(new UserRegisterViewModel());
+            return View();
         }
-
+       
         [HttpPost]
-        public async Task<IActionResult> Index(UserRegisterViewModel userRegisterView)
+        public async Task<IActionResult> ChangePassword(UserEditViewModel model)
         {
             WriterUser w = new WriterUser()
             {
-                Name = userRegisterView.Name,
-                Surname = userRegisterView.Surname,
-                Email = userRegisterView.Mail,
-                UserName = userRegisterView.UserName,
+                Name = model.Name,
+                Surname=model.Surname,
+                
             };
 
-            if (userRegisterView.Password == userRegisterView.ConfirmPassword)
+            if (model.ConfirmPassword == model.NewPassword)
             {
-                var result = await _userManager.CreateAsync(w, userRegisterView.Password);
-
+                var result = await _userManager.CreateAsync(w, model.ConfirmPassword);
+                
                 if (result.Succeeded)
                 {
                     return RedirectToAction("Index", "Login");
@@ -56,7 +53,8 @@ namespace Core_Portfolio.Areas.WriterArea.Controllers
                     }
                 }
             }
-            return View(userRegisterView);
+            return View(model);
         }
+
     }
 }

@@ -4,11 +4,23 @@
     Layout = "~/Views/Shared/_WriterLayout.cshtml";
 }
 
-<h1>Announcement Details</h1>
-<form class="form-group">
-    @Html.Label("Id")
-    @Html.TextBoxFor(x => x.Id)
-    <br />
-    @Html.Label("Content")
-    @Html.TextAreaFor(x => x.Content,10,3, new { @class ="form-control"})
-</form>
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Announcement Details</h4>
+
+            <form class="forms-sample" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <input type="hidden" asp-for="Id" class="form-control" id="exampleInputName1" placeholder="Name">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputName1">Content</label>
+                    <textarea type="text" asp-for="Content" class="form-control" rows="5" id="exampleInputName1" placeholder="Content"></textarea>
+                </div>
+
+                <a href="/WriterArea/WriterDefault/Index" role="button" class="btn btn-inverse-danger">Cancel</a>
+            </form>
+
+        </div>
+    </div>
+</div>

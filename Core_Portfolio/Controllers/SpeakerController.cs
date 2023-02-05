@@ -24,7 +24,7 @@ namespace Core_Portfolio.Controllers
             ViewBag.v2 = "Speaker";
             ViewBag.v3 = "Speaker List";
             ViewBag.v4 = "/Speaker/Index";
-            var values = speakerManager.TGetList();
+            var values = speakerManager.TGetList().OrderByDescending(x => x.Date).ToList();
             return View(values);
         
         }
@@ -52,13 +52,12 @@ namespace Core_Portfolio.Controllers
                 var savelocation = resource + "/wwwroot/SpeakerImage/" + imagename;
                 var stream = new FileStream(savelocation, FileMode.Create);
                 addSpeaker.SpeakerImage.CopyToAsync(stream);
-                speaker.SpeakerImage = imagename;
-               
+                speaker.SpeakerImage = imagename; 
 
             }
             speaker.Title = addSpeaker.Title;
             speaker.Subject = addSpeaker.Subject;
-            speaker.Date = addSpeaker.Date;        
+            //speaker.Date = addSpeaker.Date;        
             speakerManager.TAdd(speaker);
             return RedirectToAction("Index");
            
@@ -91,7 +90,7 @@ namespace Core_Portfolio.Controllers
         [HttpPost]
         public IActionResult EditSpeaker(AddSpeakerImage addSpeaker)
         {
-            Speaker speaker = new Speaker();
+            var speaker = speakerManager.TGetByID(addSpeaker.SpeakerId);
             if (addSpeaker.SpeakerImage != null)
             {
                 var resource = Directory.GetCurrentDirectory();
@@ -100,13 +99,11 @@ namespace Core_Portfolio.Controllers
                 var savelocation = resource + "/wwwroot/SpeakerImage/" + imagename;
                 var stream = new FileStream(savelocation, FileMode.Create);
                 addSpeaker.SpeakerImage.CopyToAsync(stream);
-                speaker.SpeakerImage = imagename;
-
-
+                speaker.SpeakerImage = imagename;  
             }
             speaker.Title = addSpeaker.Title;
             speaker.Subject = addSpeaker.Subject;
-            speaker.Date = addSpeaker.Date;
+            //speaker.Date = addSpeaker.Date;
             speakerManager.TUpdate(speaker);
             return RedirectToAction("Index");
             

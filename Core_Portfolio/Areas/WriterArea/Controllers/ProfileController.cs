@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace Core_Portfolio.Areas.WriterArea.Controllers
 {
     [Area("WriterArea")]
-    [Route("WriterArea/[controller]/[action]")]
+    [Route("WriterArea/Profile")]
 
     public class ProfileController : Controller
     {
