@@ -57,7 +57,7 @@ namespace Core_Portfolio.Controllers
             }
             speaker.Title = addSpeaker.Title;
             speaker.Subject = addSpeaker.Subject;
-            //speaker.Date = addSpeaker.Date;        
+            speaker.Date = addSpeaker.Date;
             speakerManager.TAdd(speaker);
             return RedirectToAction("Index");
            
@@ -103,7 +103,7 @@ namespace Core_Portfolio.Controllers
             }
             speaker.Title = addSpeaker.Title;
             speaker.Subject = addSpeaker.Subject;
-            //speaker.Date = addSpeaker.Date;
+            speaker.Date = addSpeaker.Date;
             speakerManager.TUpdate(speaker);
             return RedirectToAction("Index");
             

@@ -10,6 +10,9 @@ using System.Threading.Tasks;
 
 namespace Core_Portfolio.Areas.WriterArea.Controllers
 {
+    [AllowAnonymous]
+    [Area("WriterArea")]
+    [Route("WriterArea/Settings")]
     public class SettingsController : Controller
     {
         private readonly UserManager<WriterUser> _userManager;
@@ -18,42 +21,27 @@ namespace Core_Portfolio.Areas.WriterArea.Controllers
         {
             _userManager = userManager;
         }
-        [AllowAnonymous]
-        [Area("WriterArea")]
-        [Route("WriterArea/Settings/ChangePassword")]
+        
+
+        
         [HttpGet]
         public IActionResult ChangePassword()
         {
             return View();
         }
-       
-        [HttpPost]
-        public async Task<IActionResult> ChangePassword(UserEditViewModel model)
-        {
-            WriterUser w = new WriterUser()
-            {
-                Name = model.Name,
-                Surname=model.Surname,
-                
-            };
 
-            if (model.ConfirmPassword == model.NewPassword)
+        [HttpPost]
+        public async Task<IActionResult> ChangePassword(UserChangePasswordViewModel model)
+        {
+            var user = await _userManager.FindByNameAsync(User.Identity.Name);
+
+            user.PasswordHash = _userManager.PasswordHasher.HashPassword(user, model.Password);
+            var result = await _userManager.UpdateAsync(user);
+            if (result.Succeeded)
             {
-                var result = await _userManager.CreateAsync(w, model.ConfirmPassword);
-                
-                if (result.Succeeded)
-                {
-                    return RedirectToAction("Index", "Login");
-                }
-                else
-                {
-                    foreach (var item in result.Errors)
-                    {
-                        ModelState.AddModelError("", item.Description);
-                    }
-                }
+                return RedirectToAction("Index", "Login");
             }
-            return View(model);
+            return View();
         }
 
     }

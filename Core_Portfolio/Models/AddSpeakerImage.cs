@@ -11,7 +11,7 @@ namespace Core_Portfolio.Models
         public int SpeakerId { get; set; }
         public string Title { get; set; }
         public string Subject { get; set; }
-        public string Date { get; set; }
+        public DateTime Date { get; set; }
         public IFormFile SpeakerImage { get; set; }
     }
 }

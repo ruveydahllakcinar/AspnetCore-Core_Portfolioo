@@ -13,8 +13,7 @@
                 <table class="table">
 
                     <thead>
-                        <tr>
-                            <th>#</th>
+                        <tr>                    
                             <th>Event Image</th>
                             <th>Title</th>
                             <th>Subject</th>
@@ -27,7 +26,7 @@
                         @foreach (var speaker in Model)
                         {
                         <tr>
-                            <th>@speaker.SpeakerId</th>
+                          
                             <th scope="row">
                                 <div class="media align-items-center">
                                     <a href="#" class="avatar rounded-circle mr-3">
@@ -37,7 +36,7 @@
                             </th>
                             <td> @speaker.Title </td>
                             <td> @speaker.Subject </td>
-                            <td>@speaker.Date</td>
+                            <td>@speaker.Date.ToString("MMMM dd, yyyy")</td>
 
                             <td>
                                 <a href="/Speaker/DeleteSpeaker/@speaker.SpeakerId" class="btn btn-outline-danger">Delete</a>

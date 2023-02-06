@@ -14,7 +14,7 @@ namespace Core_Portfolio.ViewComponents.Speaker
 
         public IViewComponentResult Invoke()
         {
-            var values = speakerManager.TGetList();
+            var values = speakerManager.TGetList().OrderByDescending(x => x.Date).ToList();
             return View(values);
         }
     }

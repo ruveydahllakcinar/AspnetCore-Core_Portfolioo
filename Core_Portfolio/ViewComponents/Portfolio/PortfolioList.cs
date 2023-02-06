@@ -13,7 +13,7 @@ namespace Core_Portfolio.ViewComponents.Portfolio
 
         public IViewComponentResult Invoke()
         {
-            var values = portfolioManager.TGetList();
+            var values = portfolioManager.TGetList().Take(4).ToList();
             return View(values);
         }
 
