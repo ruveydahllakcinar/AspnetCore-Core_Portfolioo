@@ -14,7 +14,7 @@ namespace DataAccessLayer.Concrete
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("server=.\\SQLEXPRESS;database=CorePortfolio ;integrated security = true");
+            optionsBuilder.UseSqlServer("workstation id=CorePortfolio.mssql.somee.com;packet size=4096;user id=minel1313_SQLLogin_2;pwd=naw3t7r6je;data source=CorePortfolio.mssql.somee.com;persist security info=False;initial catalog=CorePortfolio");
         }
 
         internal void Remove()
