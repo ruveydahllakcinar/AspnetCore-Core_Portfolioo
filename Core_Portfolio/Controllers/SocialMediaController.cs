@@ -1,6 +1,7 @@
 ﻿using BusinessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -9,8 +10,10 @@ using System.Threading.Tasks;
 
 namespace Core_Portfolio.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class SocialMediaController : Controller
     {
+        
         SocialMediaManager socialMediaManager = new SocialMediaManager(new EfSocialMediaDal());
         public IActionResult Index()
         {

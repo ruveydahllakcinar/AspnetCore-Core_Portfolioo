@@ -14,12 +14,7 @@ namespace DataAccessLayer.Concrete
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("workstation id=CorePortfolio.mssql.somee.com;packet size=4096;user id=minel1313_SQLLogin_2;pwd=naw3t7r6je;data source=CorePortfolio.mssql.somee.com;persist security info=False;initial catalog=CorePortfolio");
-        }
-
-        internal void Remove()
-        {
-            throw new NotImplementedException();
+            optionsBuilder.UseSqlServer("workstation id=CorePortfolioDb.mssql.somee.com;packet size=4096;user id=minel1313_SQLLogin_1;pwd=792httr7sb;data source=CorePortfolioDb.mssql.somee.com;persist security info=False;initial catalog=CorePortfolioDb");
         }
 
         public DbSet<About> Abouts { get; set; }

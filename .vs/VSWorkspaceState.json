@@ -4,8 +4,10 @@
     "\\Core_Portfolio",
     "\\Core_Portfolio\\Views",
     "\\Core_Portfolio\\Views\\ExperienceAjax",
-    "\\Core_Portfolio\\Views\\Portfolio"
+    "\\Core_Portfolio\\Views\\Portfolio",
+    "\\DataAccessLayer",
+    "\\DataAccessLayer\\Repository"
   ],
-  "SelectedNode": "\\Core_Portfolio\\Core_Portfolio.sln",
+  "SelectedNode": "\\Core_Portfolio\\Program.cs",
   "PreviewInSolutionExplorer": false
 }

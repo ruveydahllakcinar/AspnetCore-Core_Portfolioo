@@ -20,7 +20,7 @@ namespace Core_Portfolio.Controllers
             ViewBag.v2 = "Certificate";
             ViewBag.v3 = "Certificate List";
             ViewBag.v4 = "/Certficate/Index";
-            var values = certficateManager.TGetList();
+            var values = certficateManager.TGetList().OrderByDescending(x => x.CompanyName).ToList(); ;
             return View(values);
         }
 

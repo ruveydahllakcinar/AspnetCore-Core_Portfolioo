@@ -3,6 +3,7 @@ using BusinessLayer.ValidationRules;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using FluentValidation.Results;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -11,12 +12,14 @@ using System.Threading.Tasks;
 
 namespace Core_Portfolio.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class PortfolioController : Controller
     {
+        
         PortfolioManager portfolioManager = new PortfolioManager(new EfPortfolioDal());
         public IActionResult Index()
         {
-            var values = portfolioManager.TGetList();
+            var values = portfolioManager.TGetList().OrderByDescending(x => x.Name).ToList(); ;
             return View(values);
         }
         [HttpGet]

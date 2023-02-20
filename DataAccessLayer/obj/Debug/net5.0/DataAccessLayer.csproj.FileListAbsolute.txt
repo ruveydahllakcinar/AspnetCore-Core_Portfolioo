@@ -20,7 +20,6 @@ C:\Users\Ruveyda\source\Core_Portfolioo\DataAccessLayer\bin\Debug\net5.0\DataAcc
 C:\Users\Ruveyda\source\Core_Portfolioo\DataAccessLayer\bin\Debug\net5.0\DataAccessLayer.runtimeconfig.json
 C:\Users\Ruveyda\source\Core_Portfolioo\DataAccessLayer\bin\Debug\net5.0\DataAccessLayer.runtimeconfig.dev.json
 C:\Users\Ruveyda\source\Core_Portfolioo\DataAccessLayer\bin\Debug\net5.0\DataAccessLayer.dll
-C:\Users\Ruveyda\source\Core_Portfolioo\DataAccessLayer\bin\Debug\net5.0\ref\DataAccessLayer.dll
 C:\Users\Ruveyda\source\Core_Portfolioo\DataAccessLayer\bin\Debug\net5.0\DataAccessLayer.pdb
 C:\Users\Ruveyda\source\Core_Portfolioo\DataAccessLayer\bin\Debug\net5.0\EntityLayer.dll
 C:\Users\Ruveyda\source\Core_Portfolioo\DataAccessLayer\bin\Debug\net5.0\EntityLayer.pdb
@@ -34,3 +33,4 @@ C:\Users\Ruveyda\source\Core_Portfolioo\DataAccessLayer\obj\Debug\net5.0\DataAcc
 C:\Users\Ruveyda\source\Core_Portfolioo\DataAccessLayer\obj\Debug\net5.0\ref\DataAccessLayer.dll
 C:\Users\Ruveyda\source\Core_Portfolioo\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.pdb
 C:\Users\Ruveyda\source\Core_Portfolioo\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.genruntimeconfig.cache
+C:\Users\Ruveyda\source\Core_Portfolioo\DataAccessLayer\bin\Debug\net5.0\ref\DataAccessLayer.dll

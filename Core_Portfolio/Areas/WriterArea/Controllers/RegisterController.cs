@@ -37,6 +37,7 @@ namespace Core_Portfolio.Areas.WriterArea.Controllers
                 Name = userRegisterView.Name,
                 Surname = userRegisterView.Surname,
                 Email = userRegisterView.Mail,
+                ImageUrl = "logo-mini.svg",
                 UserName = userRegisterView.UserName,
             };
 

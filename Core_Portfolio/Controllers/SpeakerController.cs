@@ -4,6 +4,7 @@ using Core_Portfolio.Models;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using FluentValidation.Results;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -14,8 +15,10 @@ using System.Threading.Tasks;
 
 namespace Core_Portfolio.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class SpeakerController : Controller
     {
+       
         SpeakerManager speakerManager = new SpeakerManager(new EfSpeakerDal());
 
         public IActionResult Index()

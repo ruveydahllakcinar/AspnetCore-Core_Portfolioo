@@ -10,7 +10,6 @@ using System.Threading.Tasks;
 
 namespace Core_Portfolio.Areas.WriterArea.Controllers
 {
-    [AllowAnonymous]
     [Area("WriterArea")]
     [Route("WriterArea/Settings")]
     public class SettingsController : Controller
@@ -21,8 +20,6 @@ namespace Core_Portfolio.Areas.WriterArea.Controllers
         {
             _userManager = userManager;
         }
-        
-
         
         [HttpGet]
         public IActionResult ChangePassword()
