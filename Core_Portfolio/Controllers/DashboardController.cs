@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace Core_Portfolio.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class DashboardController : Controller
-    {   [Authorize(Roles ="Admin")]
+    {   
         public IActionResult Index()
         {
             return View();

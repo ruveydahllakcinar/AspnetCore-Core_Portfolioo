@@ -30,6 +30,7 @@
 
             @await Component.InvokeAsync("ExperienceList")
 
+
             <div class="section" id="education">
                 <div class="container cc-education">
                     <div class="h4 text-center mb-4 title">Education</div>
@@ -67,9 +68,9 @@
 
                 </div>
             </div>
-
-            @await Component.InvokeAsync("SpeakerList")
             @await Component.InvokeAsync("PortfolioList")
+            @await Component.InvokeAsync("SpeakerList")
+
 
             @await Component.InvokeAsync("CertficateList")
             <div class="section" id="contact">

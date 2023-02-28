@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace Core_Portfolio.Areas.WriterArea.Controllers
 {
+    [Authorize(Roles = "Admin")]
     [Area("WriterArea")]
     [Route("WriterArea/Settings")]
     public class SettingsController : Controller

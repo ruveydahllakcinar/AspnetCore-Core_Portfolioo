@@ -11,9 +11,9 @@ using System.Threading.Tasks;
 
 namespace Core_Portfolio.Areas.WriterArea.Controllers
 {
+    [Authorize(Roles = "Admin")]
     [Area("WriterArea")]
     [Route("WriterArea/[controller]/[action]")]
-    [AllowAnonymous]
     public class RegisterController : Controller
     {
         private readonly UserManager<WriterUser> _userManager;

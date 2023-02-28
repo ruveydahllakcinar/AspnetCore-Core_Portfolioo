@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace Core_Portfolio.Areas.WriterArea.Controllers
 {
     [Area("WriterArea")]
-    [Authorize]
+    [Authorize(Roles = "Admin")]
     public class WriterDefaultController : Controller
     {
         AnnouncementManager announcementManager = new AnnouncementManager(new EfAnnouncementDal());

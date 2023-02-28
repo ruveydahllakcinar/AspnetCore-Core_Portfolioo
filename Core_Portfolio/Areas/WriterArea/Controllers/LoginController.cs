@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Core_Portfolio.Areas.WriterArea.Controllers
 {
-    [AllowAnonymous]
+    
     [Area("WriterArea")]
     [Route("WriterArea/[controller]/[action]")]
     public class LoginController : Controller

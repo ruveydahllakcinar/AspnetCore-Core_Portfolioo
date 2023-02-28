@@ -2,12 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\Core_Portfolio",
+    "\\Core_Portfolio\\Areas",
+    "\\Core_Portfolio\\Areas\\WriterArea",
+    "\\Core_Portfolio\\Areas\\WriterArea\\Controllers",
     "\\Core_Portfolio\\Views",
     "\\Core_Portfolio\\Views\\ExperienceAjax",
     "\\Core_Portfolio\\Views\\Portfolio",
     "\\DataAccessLayer",
     "\\DataAccessLayer\\Repository"
   ],
-  "SelectedNode": "\\Core_Portfolio\\Program.cs",
+  "SelectedNode": "\\Core_Portfolio\\Areas\\WriterArea\\Controllers\\LoginController.cs",
   "PreviewInSolutionExplorer": false
 }
