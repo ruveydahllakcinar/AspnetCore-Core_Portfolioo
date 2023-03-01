@@ -45,14 +45,15 @@ namespace Core_Portfolio.Areas.WriterArea.Controllers
 
             return View(messageList);
         }
+
         [Route("MessageDetails/{id}")]
         public IActionResult MessageDetails(int id)
         {
             WriterMessage writerMessage = writerMessageManager.TGetByID(id);
             return View(writerMessage);
         }
-        [Route("ReceiverMessageDetails/{id}")]
 
+        [Route("ReceiverMessageDetails/{id}")]
         public IActionResult ReceiverMessageDetails(int id)
         {
             WriterMessage writerMessage = writerMessageManager.TGetByID(id);
@@ -70,7 +71,6 @@ namespace Core_Portfolio.Areas.WriterArea.Controllers
         [HttpPost]
         [Route("")]
         [Route("SendMessage")]
-
         public IActionResult SendMessage(WriterMessage writerMessage)
         {
             var values = _userManager.FindByNameAsync(User.Identity.Name).Result;

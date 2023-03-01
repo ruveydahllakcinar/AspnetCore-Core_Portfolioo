@@ -2,16 +2,12 @@
   "ExpandedNodes": [
     "",
     "\\Core_Portfolio",
-    "\\Core_Portfolio\\Areas",
-    "\\Core_Portfolio\\Areas\\WriterArea",
-    "\\Core_Portfolio\\Areas\\WriterArea\\Controllers",
     "\\Core_Portfolio\\Views",
     "\\Core_Portfolio\\Views\\Default",
-    "\\Core_Portfolio\\Views\\ExperienceAjax",
-    "\\Core_Portfolio\\Views\\Portfolio",
-    "\\DataAccessLayer",
-    "\\DataAccessLayer\\Repository"
+    "\\Core_Portfolio\\Views\\Shared",
+    "\\Core_Portfolio\\Views\\Shared\\Components",
+    "\\Core_Portfolio\\Views\\Shared\\Components\\Last5Talks"
   ],
-  "SelectedNode": "\\Core_Portfolio\\Views\\Portfolio\\Index.cshtml",
+  "SelectedNode": "\\Core_Portfolio\\Views\\Shared\\Components\\Last5Talks\\Default.cshtml",
   "PreviewInSolutionExplorer": false
 }

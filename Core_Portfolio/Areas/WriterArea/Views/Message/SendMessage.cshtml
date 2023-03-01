@@ -8,9 +8,12 @@
 
 
 <form class="form-group" method="post">
-    
+
     @Html.Label("Receiver Mail")
     @Html.TextBoxFor(x => x.Receiver, new { @class = "form-control" })
+    <br />
+    @Html.Label("Receiver Name & Surname")
+    @Html.TextBoxFor(x => x.ReceiverName, new { @class = "form-control" })
     <br />
     @Html.Label("Subject")
     @Html.TextBoxFor(x => x.Subject, new { @class = "form-control" })
