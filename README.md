@@ -116,4 +116,4 @@ services.AddMvc(config =>
             });
 ````
 
-***I developed this project with the course found at [udemy](https://www.udemy.com/course/aspnet-core-5-ile-name-adim-web-development/) by @muratyucedag.***
+***I developed this project with the course found at [udemy](https://www.udemy.com/course/aspnet-core-5-ile-name-adim-web-development/) by [@muratyucedag](https://github.com/MuratYucedag).***
