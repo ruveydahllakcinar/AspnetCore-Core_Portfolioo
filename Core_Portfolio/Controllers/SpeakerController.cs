@@ -60,6 +60,7 @@ namespace Core_Portfolio.Controllers
             }
             speaker.Title = addSpeaker.Title;
             speaker.Subject = addSpeaker.Subject;
+            speaker.SpeakerUrl = addSpeaker.SpeakerUrl;
             speaker.Date = addSpeaker.Date;
             speakerManager.TAdd(speaker);
             return RedirectToAction("Index");
@@ -107,6 +108,7 @@ namespace Core_Portfolio.Controllers
             speaker.Title = addSpeaker.Title;
             speaker.Subject = addSpeaker.Subject;
             speaker.Date = addSpeaker.Date;
+            speaker.SpeakerUrl = addSpeaker.SpeakerUrl;
             speakerManager.TUpdate(speaker);
             return RedirectToAction("Index");
             

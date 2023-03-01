@@ -18,5 +18,7 @@ namespace EntityLayer.Concrete
         public string Subject { get; set; }        
         public DateTime Date { get; set; }
         public string SpeakerImage { get; set; }
+        public string SpeakerUrl { get; set; }
+
     }
 }

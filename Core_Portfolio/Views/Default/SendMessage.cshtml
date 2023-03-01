@@ -1,6 +1,6 @@
 ﻿<div class="col-md-12">
     <div class="card-body">
-        <form action="/Default/SendMessage/" method="post">
+        <form asp-controller="SendMessage" asp-action="Index" method="post">
             <div class="p pb-3"><strong>Feel free to contact me </strong></div>
             <div class="row mb-3">
                 <div class="col">
@@ -41,7 +41,7 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <button class="btn btn-primary" type="submit">Send</button>
+                    <button class="btn btn-primary" type="submit" onclick="alert('Your message was sent');">Send</button>
                 </div>
             </div>
         </form>

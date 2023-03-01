@@ -1,6 +1,6 @@
 ﻿@using EntityLayer.Concrete
 @model List<Speaker>
-<div class="section">
+<div class="section" id="talks&workshop">
     <div class="container cc-experience">
         <div class="h4 text-center mb-4 title">Talks&Workshops</div>
             @foreach (var speaker in Model)
@@ -15,8 +15,12 @@
                     <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
                         <div class="card-body">
                             <div class="flex-grow">
-                                <h6 class="preview-subject text-uppercase">@speaker.Title</h6>
-                                <p class="text-muted mb-0">@speaker.Subject</p>
+                                <a href="@speaker.SpeakerUrl" target="_blank">
+                                    <h6 class="preview-subject text-uppercase">@speaker.Title</h6>
+                                </a>
+                                    <p class="text-muted mb-0">@speaker.Subject</p>
+                              
+                            
                                 <p class="text-muted mb-0">@speaker.Date.ToString("MMMM,dd yyyy")</p>
                             </div> 
                         </div>

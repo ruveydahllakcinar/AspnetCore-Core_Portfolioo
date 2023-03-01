@@ -9,13 +9,12 @@ using System.Linq;
 using System.Threading.Tasks;
 
 namespace Core_Portfolio.Areas.WriterArea.Controllers
-{
-    
+{   
+    [AllowAnonymous]
     [Area("WriterArea")]
     [Route("WriterArea/[controller]/[action]")]
     public class LoginController : Controller
     {
-        
         private readonly SignInManager<WriterUser> _signInManager;
         public LoginController(SignInManager<WriterUser> signInManager)
         {

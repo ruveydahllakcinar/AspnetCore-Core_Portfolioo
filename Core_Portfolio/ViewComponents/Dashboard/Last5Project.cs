@@ -15,7 +15,7 @@ namespace Core_Portfolio.ViewComponents.Dashboard
         PortfolioManager portfolioManager = new PortfolioManager(new EfPortfolioDal());
         public IViewComponentResult Invoke()
         {
-            var values = portfolioManager.TGetList();
+            var values = portfolioManager.TGetList().OrderByDescending(x=>x.PortfolioID).Take(5).ToList();
             return View(values);
         }
     }

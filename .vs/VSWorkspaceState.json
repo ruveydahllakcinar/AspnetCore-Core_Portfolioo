@@ -6,11 +6,12 @@
     "\\Core_Portfolio\\Areas\\WriterArea",
     "\\Core_Portfolio\\Areas\\WriterArea\\Controllers",
     "\\Core_Portfolio\\Views",
+    "\\Core_Portfolio\\Views\\Default",
     "\\Core_Portfolio\\Views\\ExperienceAjax",
     "\\Core_Portfolio\\Views\\Portfolio",
     "\\DataAccessLayer",
     "\\DataAccessLayer\\Repository"
   ],
-  "SelectedNode": "\\Core_Portfolio\\Areas\\WriterArea\\Controllers\\LoginController.cs",
+  "SelectedNode": "\\Core_Portfolio\\Views\\Portfolio\\Index.cshtml",
   "PreviewInSolutionExplorer": false
 }

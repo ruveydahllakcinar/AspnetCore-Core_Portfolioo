@@ -14,7 +14,7 @@ namespace Core_Portfolio.ViewComponents.Experience
 
         public IViewComponentResult Invoke()
         {
-            var values = experienceManager.TGetList();
+            var values = experienceManager.TGetList().OrderByDescending(x => x.ExperienceId).ToList();
             return View(values);
         }
 
