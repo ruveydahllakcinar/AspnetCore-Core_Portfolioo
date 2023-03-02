@@ -11,6 +11,9 @@ I developed a CV related website. I used layered architecture on this website. I
 * Entitiy Layer
 * Data access Layer
 
+![cvtemplate](Readmeimages//layers.gif)
+
+
 I created folders within these layers and created my abstract and concrete classes. For abstract classes, I created folders named Concrete for abstract concrete classes.
 I used MsSql as database.
 
